@@ -2,7 +2,7 @@
 // sakura.pde
 //
 // github:
-//     https://github.com/yoggy/sakura
+//     https://github.com/yoggy/sakura2016
 //
 // license:
 //     Copyright (c) 2016 yoggy <yoggy0@gmail.com>
