@@ -1,8 +1,8 @@
 //
-// sakura.pde
+// sakura2016.pde
 //
 // github:
-//     https://github.com/yoggy/sakura2016
+//     https://github.com/yoggy/sakura
 //
 // license:
 //     Copyright (c) 2016 yoggy <yoggy0@gmail.com>
@@ -15,7 +15,7 @@ List<SakuraParticle> sakuras;
 
 void setup() {
   size(1280, 720);
-  
+
   sakuras = new ArrayList<SakuraParticle>();
 
   for (int i = 0; i < 100; ++i) {
@@ -23,7 +23,7 @@ void setup() {
     p.pos.x = random(0, width);
     p.pos.y = random(0, height);
     p.scale = random(0.1, 0.5);
-    
+
     sakuras.add(p);
   }
 }
@@ -31,11 +31,11 @@ void setup() {
 void draw() {
   background(#ffdbe0);
 
-  for(SakuraParticle p : sakuras) {
+  for (SakuraParticle p : sakuras) {
     p.update();
   }
 
-  for(SakuraParticle p : sakuras) {
+  for (SakuraParticle p : sakuras) {
     p.draw();
   }
 }
@@ -63,7 +63,7 @@ class SakuraParticle {
     scale(this.scale);
 
     drawSakura();
-    
+
     popMatrix();
   }
 }
@@ -99,11 +99,11 @@ void drawSakuraPetal() {
 }
 
 void drawSakuraPetalHalf() {
-  bezier(0, -10, -17, -15, -106, -131, -11, -180 );
   beginShape();
   vertex(0, -10);
-  vertex(8, -152);
-  vertex(-12, -180);
+  bezierVertex(-17, -15, -106, -131, -11, -180 );
+  vertex(0, -160);
+  vertex(0, -10);
   endShape();
 }
 
